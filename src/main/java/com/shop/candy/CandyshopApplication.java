@@ -31,21 +31,21 @@ public class CandyshopApplication implements CommandLineRunner {
         System.out.println("✅ Creado: " + p1);
         System.out.println("✅ Creado: " + p2);
 
-        System.out.println("\n📋 Todos:");
+        System.out.println(" Todos:");
         service.listarTodos().forEach(System.out::println);
 
-        System.out.println("\n🔍 Buscar id 1: " + service.obtenerPorId(1L));
+        System.out.println("\n Buscar id 1: " + service.obtenerPorId(1L));
 
         service.actualizar(1L,
                 new ProductoRequest("Chocolatina Premium", 2000.0, Categoria.CHOCOLATE));
-        System.out.println("\n✏️ Actualizado: " + service.obtenerPorId(1L));
+        System.out.println("\n Actualizado: " + service.obtenerPorId(1L));
 
         service.eliminar(2L);
-        System.out.println("\n🗑️ Eliminado id 2");
+        System.out.println("\n Eliminado id 2");
 
-        System.out.println("\n📋 Lista final:");
+        System.out.println("\nLista final:");
         service.listarTodos().forEach(System.out::println);
 
-        System.out.println("\n=== FIN SIMULACIÓN ===");
+        System.out.println("\n FIN SIMULACIÓN ");
     }
 }
